@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,100:00C9FF&height=200&section=header&text=Transformers%20%26%20BERT-Based%20NER&fontSize=32&fontColor=ffffff" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Transformer-Based%20Token%20Classification%20for%20Named%20Entity%20Recognition&fontSize=30&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Deep%20Learning%20%E2%9C%A6%20NLP%20%E2%9C%A6%20BERT%20Model&descAlignY=60&descSize=16" width="100%"/>
 
 <br/>
 
