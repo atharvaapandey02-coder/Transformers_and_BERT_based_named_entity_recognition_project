@@ -37,7 +37,7 @@
 
 ## 🎯 Overview
 
-This project implements **Named Entity Recognition (NER)** using **Transformer-based models**, specifically BERT.
+This project implements **Named Entity Recognition (NER)** using **Transformer-based models**, specifically **BERT**.
 
 Named Entity Recognition is a token classification task that identifies and classifies entities in text such as:
 
@@ -58,18 +58,16 @@ Traditional NLP approaches:
 - Depend on handcrafted features
 - Struggle with contextual understanding
 
-This project solves these issues using:
+This project solves these limitations using:
 
 - Pretrained BERT embeddings
 - Self-attention mechanism
 - Context-aware token classification
-- End-to-end deep learning training
+- End-to-end deep learning fine-tuning
 
 ---
 
 ## 🧠 Model Architecture
-
-The system is built using:
 
 ```
 Input Text
@@ -109,31 +107,65 @@ Entity Label Prediction
 - Pretrained BERT model loaded
 - Token classification head added
 - Cross-entropy loss used
-- Backpropagation with AdamW optimizer
+- AdamW optimizer for training
+- Backpropagation for weight updates
 
 ### 3️⃣ Prediction
 
 - Each token assigned a label
-- BIO tagging scheme used (e.g., B-PER, I-LOC, O)
+- BIO tagging scheme used:
+  - B-PER
+  - I-PER
+  - B-LOC
+  - I-LOC
+  - B-ORG
+  - I-ORG
+  - B-MISC
+  - I-MISC
+  - O
 
 ---
 
 ## 📊 Dataset
 
-The dataset consists of:
+### Context
 
-- Tokenized sentences
-- Corresponding entity labels
-- BIO tagging format
+This is an **annotated dataset for the Named Entity Recognition (NER) task**.
 
-Example:
+### Dataset Split
+
+The dataset is divided into:
+
+- `train.txt`
+- `test.txt`
+- `valid.txt`
+
+### Label Tags
+
+Each token is labeled using the BIO tagging scheme with the following tags:
 
 ```
-John   → B-PER
-lives  → O
-in     → O
-Paris  → B-LOC
+I-LOC
+B-ORG
+O
+B-PER
+I-PER
+I-MISC
+B-MISC
+I-ORG
+B-LOC
 ```
+
+### Example
+
+```
+John     B-PER
+lives    O
+in       O
+Paris    B-LOC
+```
+
+This format allows the model to learn token-level entity classification.
 
 ---
 
@@ -145,7 +177,7 @@ Paris  → B-LOC
 - F1 Score
 - Classification Report
 
-F1 Score is especially important for imbalanced entity classes.
+F1 Score is especially important for evaluating entity-level performance.
 
 ---
 
@@ -179,14 +211,15 @@ Seqeval
 pip install -r requirements.txt
 ```
 
-### Run the code
+### Run the Notebook
+
+Since this project is implemented in a Jupyter Notebook:
 
 ```
-python BERT_NER.ipynb
+jupyter notebook BERT_NER.ipynb
+```
 
-
-
-
+Then execute all cells sequentially.
 
 ---
 
@@ -208,15 +241,13 @@ Inference on New Text
 
 ---
 
-
 ## 🔭 Future Improvements
 
 ```
-
 📈 Hyperparameter tuning
 🧠 Add CRF layer for better sequence modeling
 🌍 Multilingual NER support
-🚀 Deploy as API or Web App
+🚀 Deploy as REST API or Web Application
 ```
 
 ---
