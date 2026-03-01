@@ -179,23 +179,12 @@ Seqeval
 pip install -r requirements.txt
 ```
 
-### Train the Model
+### Run the code
 
 ```
-python train.py
-```
+python BERT_NER.ipynb
 
-### Evaluate the Model
 
-```
-python evaluate.py
-```
-
-### Run Inference
-
-```
-python predict.py
-```
 
 ---
 
@@ -220,7 +209,7 @@ Inference on New Text
 ## 🔭 Future Improvements
 
 ```
-⚡ Use RoBERTa / DeBERTa for comparison
+
 📈 Hyperparameter tuning
 🧠 Add CRF layer for better sequence modeling
 🌍 Multilingual NER support
