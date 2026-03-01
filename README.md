@@ -186,6 +186,8 @@ python BERT_NER.ipynb
 
 
 
+
+
 ---
 
 ## 📂 Project Workflow
@@ -205,6 +207,7 @@ Inference on New Text
 ```
 
 ---
+
 
 ## 🔭 Future Improvements
 
